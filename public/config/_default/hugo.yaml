@@ -1,0 +1,111 @@
+baseURL: https://example.com/
+relativeURLs: yes
+uglyURLs: no
+theme: hugo-theme-relearn
+defaultContentLanguage: en
+title: Hugo Relearn Theme
+outputs:
+  home:
+    - html
+    - rss
+    - print
+    - search
+    - searchpage
+  page:
+    - html
+    - rss
+    - print
+  section:
+    - html
+    - rss
+    - print
+markup:
+  goldmark:
+    duplicateResourceFiles: yes
+    renderer:
+      unsafe: yes
+  highlight:
+    lineNumbersInTable: no
+    noClasses: no
+server:
+  headers:
+    - for: '**.html'
+      values:
+        X-UA-Compatible: IE=edge
+languages:
+  en:
+    languageName: English
+    menu:
+      shortcuts:
+        - identifier: ds
+          name: <i class='fab fa-fw fa-github'></i> GitHub repo
+          url: https://github.com/McShelby/hugo-theme-relearn
+          weight: 10
+        - name: <i class='fas fa-fw fa-camera'></i> Showcases
+          pageRef: showcase/
+          weight: 20
+        - name: <i class='fas fa-fw fa-bullhorn'></i> Credits
+          pageRef: more/credits/
+          weight: 30
+        - name: <i class='fas fa-fw fa-tags'></i> Tags
+          pageRef: tags/
+          weight: 40
+        - name: <i class='fas fa-fw fa-layer-group'></i> Categories
+          pageRef: categories/
+          weight: 50
+    params:
+      landingPageName: <i class='fas fa-home'></i> Home
+    title: Hugo Relearn Theme
+    weight: 1
+  pir:
+    languageCode: art-pir
+    languageDirection: rtl
+    languageName: Arrr! ☠ Pirrrates ☠
+    menu:
+      shortcuts:
+        - identifier: ds
+          name: <i class='fab fa-fw fa-github'></i> GitHub repo
+          url: https://github.com/McShelby/hugo-theme-relearn
+          weight: 10
+        - name: <i class='fas fa-fw fa-camera'></i> Showcases
+          pageRef: showcase/
+          weight: 20
+        - name: <i class='fas fa-fw fa-bullhorn'></i> Crrredits
+          pageRef: more/credits/
+          weight: 30
+        - name: <i class='fas fa-fw fa-tags'></i> Arrr! Tags
+          pageRef: tags/
+          weight: 40
+        - name: <i class='fas fa-fw fa-layer-group'></i> Categorrries
+          pageRef: categories/
+          weight: 50
+    params:
+      landingPageName: <i class='fas fa-home'></i> Arrr! Home
+    title: Cap'n Hugo Relearrrn Theme
+    weight: 2
+module:
+  mounts:
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: data
+      target: data
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static
+    - source: config
+      target: static/config
+    - source: ../images
+      target: assets/images
+params:
+  imageEffects:
+    bg-white: yes
+  siteparam:
+    test:
+      text: A **nested** option <b>with</b> formatting
