@@ -41,3 +41,8 @@ params:
   logo:
     mobile: /images/logo-mobile.svg
     standard: /images/logo.svg
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
